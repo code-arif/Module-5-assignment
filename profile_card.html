@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Card | Codearif</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #E7D4B5;
+        }
+
+        .container,
+        .img-area {
+            background: #B6C7AA;
+
+        }
+
+        .container {
+            position: relative;
+            width: 350px;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+
+
+        .wrapper i {
+            position: relative;
+            z-index: 9;
+        }
+
+        .wrapper .img-area {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .inner-area img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #c2cabd;
+        }
+
+        .container .name {
+            font-size: 23px;
+            font-weight: 500;
+            color: #31344b;
+            margin: 10px 0 2px 0;
+        }
+
+        .container .occupation {
+            color: #44476a;
+            font-weight: 400;
+            font-size: 13px;
+        }
+
+        .description {
+            color: #31344b;
+            font-size: 14px;
+            padding: 15px 0px;
+            text-align: center;
+        }
+
+
+        .container .social-share {
+            display: flex;
+            width: 100%;
+            margin-top: 30px;
+            padding: 0 5px;
+            justify-content: space-between;
+        }
+
+        .social-share .row {
+            color: #31344b;
+            font-size: 17px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .social-share .row::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 2px;
+            background: #e0e6eb;
+            margin-left: -25px;
+        }
+
+
+        .social-share .row i.icon-2 {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            color: #31344b;
+            transform: translateY(-50%);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .row:nth-child(1):hover i.fa-heart,
+        .row:nth-child(2):hover i.fa-comment {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="img-area">
+            <div class="inner-area">
+                <!-- <img src="profile.jpg" alt=""> -->
+                <img src="profile.jpg" alt="Profile Picture" style="width: 120px; height: 120px; ; border-radius: 50%;">
+            </div>
+        </div>
+        <div class="name">Md. Ariful Islam</div>
+        <div class="occupation">Full Stack Web Developer</div>
+
+        <p class="description">Creative and detail-oriented web developer with expertise in HTML, CSS, PHP & Laravel,
+            and responsive design. Passionate about creating user-friendly websites and optimizing performance.</p>
+
+        <div class="contact-info">
+            <p>Email: <a href="mailto:info@codearif.com">info@codearif.com</a> </p>
+            <p>Phone: <a href="tel:+880 1745 485623">+880 1745 485623</a> </p>
+        </div>
+
+        <div class="social-share">
+            <div class="row">
+                <i class="far fa-heart"></i>
+                <i class="icon-2 fas fa-heart"></i>
+                <span>1.4k</span>
+            </div>
+            <div class="row">
+                <i class="far fa-comment"></i>
+                <i class="icon-2 fas fa-comment"></i>
+                <span>4.3k</span>
+            </div>
+            <div class="row">
+                <i class="fas fa-share"></i>
+                <span>0.8k</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
